@@ -1,0 +1,299 @@
+ 
+header {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    height: 200px;
+    background: #ffffff;
+    /* fallback for old browsers */
+   
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+ nav {
+   
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-around;
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(191, 82%, 69%, 0.459), hsla(181, 55%, 39%, 0.664)), url(../img/Fondo/ensayo.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(339, 8%, 36%, 0.459), hsla(196, 71%, 67%, 0.664)), url(../img/Fondo/ensayo.jpg);
+}
+
+body  {
+    font-family: 'open sans';
+
+     
+}
+ 
+ 
+ body .dark .about-services{
+    background-color: #111111;
+ }
+
+ body{
+    background: #bc4e9c;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, hsla(191, 82%, 69%, 0.459), hsla(181, 55%, 39%, 0.664)), url(../img/Fondo/ensayo.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(336, 89%, 61%, 0.213), hsla(196, 71%, 67%, 0.209)), url(../img/Fondo/ensayo.jpg);
+ }
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+ 
+ 
+
+
+  nav{
+      display: flex;
+      align-items:center;
+    
+      min-height:8vh;
+      background-color: #ffffff2d;
+      width: 100%;
+   
+      
+  }
+
+nav li{
+    margin-top: 12px;
+    
+   
+   
+  }
+
+
+nav ul li a{
+    text-align: center;
+}
+
+ 
+
+ 
+
+  .ham{
+    display:none;
+    background-color:transparent;
+    cursor: pointer;
+    border:none;
+    margin:0;
+    padding:0;
+    }
+    
+    .ham span{
+        background-color: #000000;
+        display:block;
+        height:3px;
+        width: 28px;
+        margin:10px auto;
+        border-radius:2px;    
+        
+    }
+  .enlaces-menu{
+    
+      display:flex;
+      padding:0;
+  }
+  .enlaces-menu li{
+      padding: 0 30px;
+      list-style-type: none;
+      transition: 0.3s;
+     
+  }
+
+  .enlaces-menu li a{
+      text-decoration:none;
+      font-size: 15px;
+      color:#000000;
+      font-weight:600;
+  }
+  .enlaces-menu li:hover{
+    border-radius: 20px;
+    background-color:rgb(255, 255, 255);
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+
+/* DISPOSITIVOS MOVILES */
+
+  @media (max-width:768px) {
+   
+
+    
+
+      .ham{
+          display:block;
+          cursor:pointer;
+          position: absolute; 
+          top:15px;
+          right:25px;
+          transition: 0.2s  0.1s; 
+  
+      }
+   
+      
+      nav{
+          flex-direction:column;
+          padding-top: 45px;
+          padding-bottom: 45px;
+          justify-content: center;
+          
+          
+      }
+
+      header{
+        
+        height: 360px;
+     
+    }
+   
+       
+       
+ 
+
+      .enlaces-menu{
+ 
+          flex-direction:column;
+          justify-content: space-around;
+          align-items:center;
+          height:280px;         
+          margin:0;
+          padding:0; 
+          display:none;
+          opacity:0;
+          transition: opacity 5s ease-out;
+          width:100%;
+      
+         
+      }
+      .enlaces-menu li{
+        
+        text-align:center;
+        width:100%;
+        padding:20px; 
+          
+    }
+  
+}
+
+/* Animaciones */
+  
+@keyframes muestraMenu {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  .enlaces-menu.activado{
+      display:flex; 
+      animation: muestraMenu 350ms ease-in-out both;
+  }
+
+  .br-1.animado{
+    transform: rotate(-45deg) translate(-10px, 8px);
+  }
+  
+  .br-2.animado{
+    opacity: 0;
+  }
+  .br-3.animado{
+    transform: rotate(45deg) translate(-10px, -8px);
+  }
+
+ .ham.girar:hover{
+     transform:rotate(360deg);
+ }
+
+
+ /* Estilos para seleccionar color del producto */
+.container .images img{
+    display: flex;
+    width: 60%;
+    margin: auto;
+ 
+   justify-content: center;
+}
+
+.img{
+     
+    width: 200px;
+}
+
+.color-select{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: auto;
+ 
+}
+
+.color-select span{
+    width: 20px;
+    height: 17px;
+    border: 1px rgb(0, 0, 0) solid;
+    background: blue;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+ 
+.color-select #gris{
+    background-color: rgb(222, 222, 222);
+}
+
+.color-select #azul{
+    background-color:blue;
+}
+
+.color-select #rojo{
+    background-color: rgb(255, 0, 0);
+}
+
+.color-select #plata{
+    background-color:gray;
+}
+
+
+
+
+.color-select #gray{
+    background-color: rgb(222, 222, 222);
+}
+
+.color-select #blue{
+    background-color:blue;
+}
+
+.color-select #red{
+    background-color: rgb(255, 0, 0);
+}
+
+.color-select #gold{
+    background-color:gray;
+}
+
+
